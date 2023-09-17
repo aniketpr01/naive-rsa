@@ -2,6 +2,17 @@
 
 A naive bare-bones implementation of RSA algorithm
 
+## Implemented
+
+* [x] Generate big numbers of 512 bits and 1024 bits.
+* [x] Implement modular exponentiation operation needed by Rabin-Miller algorithm. (TESTED AND WORKING)
+* [x] Implement modular exponentiation operation needed by Rabin-Miller algorithm. (TESTED AND WORKING)
+* [x] Implement Rabin Miller algorithm. (TESTED AND WORKING)
+* [x] Optimize Rabin-Miller algorithm by using choosing [2,13,23,1662803]
+* [x] Implement Extended Euclides Algorithm to search for mcd of two suposed prime numbers.
+* [x] Encrypt messages with Public Key.
+* [x] Decrypt messages with Secret Key. (TESTED AND WORKING)
+
 ## Private and Public key generation
 
  1. Select two large prime numbers p and q - ***Private***
@@ -27,28 +38,16 @@ A naive bare-bones implementation of RSA algorithm
 
 ### FINDING BIG PRIME NUMBERS
 
-'96543390677764721740735128239245428995208381696823499601989570975501893576667 is prime' is a true statement!
-
-RSA PUBLIC KEY ENCRYPTION
-
-Plaintext:            'Coming tomorrow!'
-
+* Plain text: Hello world!
+* Finding Big Prime numbers
+* Calculating N = P * Q = 105061437740618400841751815103485843772900018163207227878597714063924116015569567946519129138173427894806320898500493646912347868102096725176100448023741769777882646066357540662156140732678563360778999550201179680099035509145303572645350787641604231605334738143959611745162153224524225089447791769349840341611
 Generating key pair...
 
-* Private key is: d=0x0ae6893332356966ecb6eec38e11a8dc6f6ec7925f5d4f18eb3b1c6c400d39ab, n=0x1059cdcccb501e1a63126625551a7d4b28dd4077e5b850ee69a8551081d2c6f5,
-* Public key is:  e=0x03, n=0x1059cdcccb501e1a63126625551a7d4b28dd4077e5b850ee69a8551081d2c6f5, key_size=256
-
-Ciphertext:           '0x01a93489f8f4bfb95ed88a99ff4faa9894c3f2fa26f401df6f7e40601444fdb2'
-
-Decrypted ciphertext: 'Coming tomorrow!'
+* Public key is:  65537
+* Private key is: 16598350952383583659848609084661983710340827136760114705509875816986897435421323931798206556550462676393863719472574442225467290634742351533841097987973542760618925920396000166372201814567779108753258829070069521088628498119210909499687585288677905420966448619507997857592257097762834973885352153403674268017
+* Decrypted Hello world!
 
 ### -----------------------------------
-
-* Choose big primary numbers
-* use miller-rabin for primality test
-* use square and multiply for encryption and decryption
-* choose e 65537 -> fermat's representation
-* consider low hamming weight
 
 ## Miller-Rabin
 
